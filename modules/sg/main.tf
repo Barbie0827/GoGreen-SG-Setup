@@ -3,7 +3,7 @@ resource "aws_security_group" "default" {
  
   name        = each.key
   description = each.value.description
-  vpc_id      = var.vpc_id
+  vpc_id      = aws_vpc.default.id
  
   dynamic "ingress" {
     for_each = each.value.ingress_rules != null ? each.value.ingress_rules : []

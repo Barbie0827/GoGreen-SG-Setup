@@ -1,6 +1,6 @@
 module "bastion_security_group" {
-  source  = "app.terraform.io/02-spring-cloud/security-groups/aws"
-  version = "2.0.0"
+  source  = "app.terraform.io/0227springcloud/security-groups/aws"
+  version = "1.0.0"
   vpc_id  = aws_vpc.vpc.id
   security_groups = {
     bastion_sg = {
@@ -29,8 +29,8 @@ module "bastion_security_group" {
 }
  
 module "web_security_group" {
-  source  = "app.terraform.io/02-spring-cloud/security-groups/aws"
-  version = "2.0.0"
+  source  = source  = "app.terraform.io/0227springcloud/security-groups/aws"
+  version = "1.0.0"
   vpc_id  = aws_vpc.vpc.id
   security_groups = {
     alb_web_sg = {
@@ -67,8 +67,8 @@ module "web_security_group" {
 }
  
 module "web_security_group1" {
-  source  = "app.terraform.io/02-spring-cloud/security-groups/aws"
-  version = "2.0.0"
+  source  = source  = "app.terraform.io/0227springcloud/security-groups/aws"
+  version = "1.0.0"
   vpc_id  = aws_vpc.vpc.id
   security_groups = {
     web_ec2_sg = {
@@ -114,8 +114,8 @@ module "web_security_group1" {
 }
  
 module "app_security_group" {
-  source  = "app.terraform.io/02-spring-cloud/security-groups/aws"
-  version = "2.0.0"
+  source  = "app.terraform.io/0227springcloud/security-groups/aws"
+  version = "1.0.0"
   vpc_id  = aws_vpc.vpc.id
   security_groups = {
     alb_app_sg = {
@@ -144,8 +144,8 @@ module "app_security_group" {
 }
  
 module "app_security_group1" {
-  source  = "app.terraform.io/02-spring-cloud/security-groups/aws"
-  version = "2.0.0"
+ source  = "app.terraform.io/0227springcloud/security-groups/aws"
+  version = "1.0.0"
   vpc_id  = aws_vpc.vpc.id
   security_groups = {
     app_ec2_sg = {
@@ -182,8 +182,8 @@ module "app_security_group1" {
 }
  
 module "db_security_group" {
-  source  = "app.terraform.io/02-spring-cloud/security-groups/aws"
-  version = "2.0.0"
+  source  = "app.terraform.io/0227springcloud/security-groups/aws"
+  version = "1.0.0"
   vpc_id  = aws_vpc.vpc.id
   security_groups = {
     db_sg = {
